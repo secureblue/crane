@@ -23,4 +23,4 @@ go2rpm --name crane --profile vendor --version "${VERSION}" -s pkg/crane https:/
 mv "go-containerregistry-${VERSION}-vendor.tar.bz2" ..
 cd ..
 rm generate_vendor -rf
-cd ..
+mv ./* ../
