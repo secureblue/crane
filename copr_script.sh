@@ -16,7 +16,8 @@ set -oue pipefail
 
 cd crane
 VERSION=$(grep -E '^Version:' crane.spec | awk '{print $2}')
-mkdir generate_vendor
+mkdir -p generate_vendor
+cp go-vendor-tools.toml generate_vendor
 cd generate_vendor
 go2rpm --name crane --profile vendor --version "${VERSION}" -s pkg/crane https://github.com/google/go-containerregistry/
 mv "go-containerregistry-${VERSION}-vendor.tar.bz2" ..
