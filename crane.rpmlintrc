@@ -1,0 +1,2 @@
+addFilter('patch-not-applied')
+addFilter('invalid-url')
