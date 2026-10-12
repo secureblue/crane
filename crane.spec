@@ -4,7 +4,7 @@
 # https://github.com/google/go-containerregistry
 %global goipath         github.com/google/go-containerregistry
 # renovate: datasource=github-releases depName=google/go-containerregistry extractVersion=^v(?<version>.*)$
-Version:                0.22.0
+Version:                0.22.1
 
 %gometa -L -f
 
