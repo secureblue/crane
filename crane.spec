@@ -21,6 +21,8 @@ Source0:        %{gosource}
 Source1:        %{archivename}-vendor.tar.bz2
 Source2:        go-vendor-tools.toml
 
+Patch0:          https://github.com/google/go-containerregistry/commit/9429ab88702a5bc1993befa31ee0e9decda9d237.patch
+
 BuildRequires:  go-vendor-tools
 
 %description
@@ -29,6 +31,7 @@ Go library and CLIs for working with container registries.
 %prep
 %goprep -A
 %setup -q -T -D -a1 %{forgesetupargs}
+%autopatch -p1
 
 %generate_buildrequires
 %go_vendor_license_buildrequires -c %{S:2}
